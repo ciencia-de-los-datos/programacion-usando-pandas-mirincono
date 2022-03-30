@@ -23,8 +23,8 @@ def pregunta_01():
     40
 
     """
-    repuesta = tbl0.shape[0]
-    return respuesta
+    repuesta1 = tbl0.shape[0]
+    return respuesta1
 
 
 def pregunta_02():
@@ -35,8 +35,8 @@ def pregunta_02():
     4
 
     """
-    respuesta = tbl0.shape[1]
-    return respuesta
+    respuesta2 = tbl0.shape[1]
+    return respuesta2
 
 
 def pregunta_03():
@@ -221,3 +221,6 @@ def pregunta_13():
     Name: _c5b, dtype: int64
     """
     return
+
+
+print(pregunta_01())
