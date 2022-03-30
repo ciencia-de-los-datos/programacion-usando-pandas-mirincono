@@ -211,8 +211,11 @@ def pregunta_12():
     38   38                    eee:0,fff:9,iii:2
     39   39                    ggg:3,hhh:8,jjj:5
     """
-    
-    return
+    data = pd.merge(tbl0,tbl2,left_on="_c0",right_on="_c0")
+    columnas = ['_c5a','_c5b']
+    data['_c5'] = data[columnas].apply(lambda row: ':'.join(row.values.astype(str)), axis=1)
+    data = data.groupby(['_c0']).agg({'_c5':lambda x: ",".join(sorted(list(x)))}).reset_index()
+    return data
 
 
 
