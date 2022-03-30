@@ -172,6 +172,8 @@ def pregunta_10():
     3   D                  1:2:3:5:5:7
     4   E  1:1:2:3:3:4:5:5:5:6:7:8:8:9
     """
+
+
     return
 
 
@@ -191,7 +193,8 @@ def pregunta_11():
     38   38      d,e
     39   39    a,d,f
     """
-    return
+    data = tbl1.groupby(['_c0']).agg({'_c4': lambda x: ",".join(sorted(list(x)))})
+    return data
 
 
 def pregunta_12():
