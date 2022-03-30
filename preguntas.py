@@ -193,7 +193,7 @@ def pregunta_11():
     38   38      d,e
     39   39    a,d,f
     """
-    data = tbl1.groupby(['_c0']).agg({'_c4': lambda x: ",".join(sorted(list(x)))})
+    data = tbl1.groupby(['_c0']).agg({'_c4': lambda x: ",".join(sorted(list(x)))}).reset_index()
     return data
 
 
