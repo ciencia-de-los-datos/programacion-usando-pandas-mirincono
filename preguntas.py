@@ -172,7 +172,7 @@ def pregunta_10():
     3   D                  1:2:3:5:5:7
     4   E  1:1:2:3:3:4:5:5:5:6:7:8:8:9
     """
-    data = tbl0.groupby(['_c1']).agg({'_c2': lambda x: ":".join(map(str,sorted(list(x))))}).reset_index()
+    data = tbl0.groupby(['_c1']).agg({'_c2': lambda x: ":".join(map(str,sorted(list(x))))})
     return data
 
 
