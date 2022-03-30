@@ -14,6 +14,8 @@ tbl1 = pd.read_csv("tbl1.tsv", sep="\t")
 tbl2 = pd.read_csv("tbl2.tsv", sep="\t")
 
 
+print(tbl0.head(n=5))
+
 
 def pregunta_01():
     """
@@ -23,8 +25,8 @@ def pregunta_01():
     40
 
     """
-    repuesta1 = tbl0.shape[0]
-    return respuesta1
+    repuesta = tbl0.shape[0]
+    return respuesta
 
 
 def pregunta_02():
@@ -35,8 +37,8 @@ def pregunta_02():
     4
 
     """
-    respuesta2 = tbl0.shape[1]
-    return respuesta2
+    respuesta = tbl0.shape[1]
+    return respuesta
 
 
 def pregunta_03():
@@ -53,7 +55,8 @@ def pregunta_03():
     Name: _c1, dtype: int64
 
     """
-    return
+    respuesta = tbl0.groupby("_c1")["_c1"].count()
+    return respuesta
 
 
 def pregunta_04():
@@ -221,6 +224,5 @@ def pregunta_13():
     Name: _c5b, dtype: int64
     """
     return
-
 
 print(pregunta_01())
